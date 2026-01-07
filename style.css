@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+  background: linear-gradient(to bottom, #ffe6f0, #fff);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Floating hearts background */
+.heart {
+  position: fixed;
+  bottom: -10px;
+  color: #ff4d88;
+  font-size: 20px;
+  animation: floatUp 8s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+h1 {
+  color: #ff4d88;
+  margin-top: 30px;
+  font-size: 38px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+#countdown {
+  background: #fff0f6;
+  padding: 20px;
+  margin: 20px auto;
+  width: 85%;
+  border-radius: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  animation: fadeIn 2s ease-in;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  width: 260px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(255,77,136,0.25);
+  animation: fadeInUp 1.5s ease forwards;
+  opacity: 0;
+}
+
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+.card:nth-child(5) { animation-delay: 1s; }
+.card:nth-child(6) { animation-delay: 1.2s; }
+.card:nth-child(7) { animation-delay: 1.4s; }
+.card:nth-child(8) { animation-delay: 1.6s; }
+.card:nth-child(9) { animation-delay: 1.8s; }
+.card:nth-child(10) { animation-delay: 2s; }
+
+.card:hover {
+  transform: scale(1.06);
+}
+
+.card h3 {
+  color: #ff4d88;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 18px;
+  margin-bottom: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
